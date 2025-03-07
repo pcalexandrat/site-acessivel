@@ -3,8 +3,8 @@
 
 :root {
     --laranja-claro: #FF862A;
-    --alto-contraste-fundo: #000000;
-    --alto-contraste-texto: #ffffff;
+    --alto-contraste-fundo: #fa0707;
+    --alto-contraste-texto: #a377db;
     --alto-contraste-link: #ffd700;
 }
 
@@ -141,7 +141,7 @@ h2 {
     background-color: #F1EDEF;
 }
 .menu-acessibilidade{
-    position: fixed;
+    position:fixed ;
     top:2rem;
     right:20px;
     z-index: 1000;
