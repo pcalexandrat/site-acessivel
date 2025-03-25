@@ -147,7 +147,7 @@ h2 {
     right:20px;
     z-index: 1000;
 }
-
+/*gira o botão e deixa do lado direito ao centro*/
 .rotacao-botao{
     transform: rotate(-90deg);
     transform-origin: right center;
@@ -162,6 +162,7 @@ h2 {
 .opcoes-acessibilidade button{
     margin-bottom: 5px;
 }
+/*comando para ocultar os botões, só aparece quando clica*/
 .apresenta-lista{
     display: none;
 }
