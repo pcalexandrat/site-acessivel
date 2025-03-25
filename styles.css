@@ -136,10 +136,11 @@ h2 {
     border: none;
     font-weight: bold;
 }
-
+/*chama a classe do bootstrap para modificar a cor */
 .form-control {
-    background-color: #F1EDEF;
+    background-color: #4a0728;
 }
+/*comandos para estilizar o botão de menu acessibilibdade*/
 .menu-acessibilidade{
     position:fixed ;
     top:2rem;
