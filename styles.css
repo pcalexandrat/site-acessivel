@@ -190,9 +190,6 @@ h2 {
     color: var(--alto-contraste-fundo)
 }
 
-.alto-contraste #tropicalia {
-    background: none;
-}
 
 .alto-contraste #galeria {
     background-color: var(--alto-contraste-fundo);
