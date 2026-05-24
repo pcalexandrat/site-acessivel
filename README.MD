@@ -1,14 +1,11 @@
-# Site acessível sobre Tropicália
+# Site sobre Agricultura e meio ambiente
 # Sobre
 Refatoração de um site implementando recursos de acessibilidade no html, css e JS.
 ## Recursos de acessibilidade
-- Atributos aria
+- de mudança de cor de fundo 
 - alt
-- tab-index
 - menu de acessibilidade
 ## Tecnologias utilizadas
-- Bootstrap
-- ScrollRevealjs
 - HTML
 - CSS
-- JS
+- Javascript
