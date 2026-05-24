@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,108 +8,332 @@
         <link rel="stylesheet"
             <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header class=" p-5">
-        <nav class="container d-flex justify-content-between align-items-center">
-            <img src="img/eng-hawaii-logo-EF35631F81-seeklogo.com.png" class="nav-img " loading="lazy">
-            <ul class="nav mt-5">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>
-            <div id="acessibilidade" class="menu-acessibilidade">
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao"
-                    aria-expanded="false">acessibilidade</button>
-                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">  
-                    <button id="aumentar-fonte" class="btn btn-primary fw-bold"
-                    aria-label="Aumentar o tamanho da fonte">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold"
-                    aria-label="diminuir o tamanho da fonte">A-</button>
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold"
-                    aria-label="Alterna o contraste de cores"> <i class="bi bi-shadows"></i></button>
-                </div>
+  <header class="header" id="topo">
+    <div class="header-inner">
+      <a class="logo" href="#inicio" aria-label="Voltar ao início">
+        <img src="./img/logo.png" alt="Logo Agrinho" />
+      </a>
+
+      <div class="site-title">Do Campo ao Copo: A Jornada do Malte em Guarapuava</div>
+
+      <nav class="navbar" aria-label="Navegação principal">
+        <div class="nav-desktop">
+          <div class="nav-more nav-more-only">
+            <button class="nav-more-btn" id="nav-more-btn" type="button" aria-expanded="false" aria-controls="nav-more-panel">
+              <span>Explorar</span>
+              <span class="nav-more-arrow" aria-hidden="true">▾</span>
+            </button>
+            <div class="nav-more-panel" id="nav-more-panel">
+              <a href="#jornada">Jornada</a>
+              <a href="#galeria">Galeria</a>
+              <a href="#curiosidades">Curiosidades</a>
+              <a href="#quiz">Quiz</a>
+              <a href="#sustentabilidade">Sustentabilidade</a>
+              <a href="#video">Vídeo</a>
+              <a href="#hq">HQ</a>
+              <a href="#contato">Contato</a>
             </div>
-        </nav>
+          </div>
+        </div>
 
-    </header>
+        <button class="hamburger" id="menu-toggle" aria-label="Abrir menu" aria-controls="nav-links" aria-expanded="false">
+          ☰
+        </button>
 
+        <ul class="nav-links nav-links-mobile" id="nav-links">
+          <li><a href="#jornada">Jornada</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#curiosidades">Curiosidades</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+          <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+          <li><a href="#video">Vídeo</a></li>
+          <li><a href="#hq">HQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main class="container my-5">
+  <button id="accessibility-btn" class="accessibility-fixed" aria-label="Menu de acessibilidade" aria-expanded="false">
+    A+
+  </button>
 
-        <section id="inicio" class="my-5">
-            <div class="inicio-fundo d-flex justify-content-between align-items-center">
-                <div class="esquerda-conteudo">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas a</h1>
-                    <img src="" class="mb-3" width="563" height="278" loading="lazy">
-                    <a href="#tropicalia" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero
-                        conhecer!</a>
-                </div>
-                <img src="img/Humberto_Gessinger_2017-removebg-preview.png"
-                    alt="A imagem apresenta o cantor Humberto Gessinger da banda Engenheiros do Hawai, tocando uma guitarra"
-                    title="Crazy Louco, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons" title"https://upload.wikimedia.org/wikipedia/commons/e/e7/Humberto_Gessinger_2017.jpg" class="img-fluid img-inicio">
+  <div id="accessibility-menu" class="accessibility-menu hidden" role="dialog" aria-label="Menu de acessibilidade">
+    <button type="button" onclick="increaseFont()">Aumentar fonte</button>
+    <button type="button" onclick="decreaseFont()">Diminuir fonte</button>
+    <button type="button" onclick="toggleContrast()">Alto contraste</button>
+  </div>
 
+  <main>
+    <section id="inicio" class="hero-section reveal">
+      <div class="hero-shell">
+        <div class="hero-copy">
+          <span class="eyebrow">Do campo ao copo</span>
+          <h1>Agro forte, futuro sustentável em cada etapa da jornada do malte</h1>
+          <p class="hero-lead">
+            Da <strong>cevada cultivada no campo</strong> ao <strong>malte que movimenta a indústria e chega à cidade</strong>,
+            esta cadeia produtiva mostra como produção, tecnologia e cuidado ambiental podem caminhar juntos.
+          </p>
+          <p>
+            Em Guarapuava, essa conexão revela que o desenvolvimento sustentável nasce do equilíbrio entre trabalho rural,
+            inovação, transformação industrial e uso responsável dos recursos naturais.
+          </p>
+
+          <div class="hero-actions">
+            <a class="action-btn" href="#jornada">Conhecer a jornada</a>
+            <a class="secondary-btn" href="#sustentabilidade">Ver ações sustentáveis</a>
+          </div>
+
+          <div class="hero-points" aria-label="Pontos centrais do projeto">
+            <div class="hero-point">
+              <strong>Campo</strong>
+              <span>Cultivo planejado e manejo responsável.</span>
             </div>
-        </section>
-
-        <section id="tropicalia" class="my-5 pt-6 secao-tropicalia" tabindex="0"
-            aria-label="Seção explicativa sobre a tropicália">
-            <div class="container d-flex align-items-center ">
-                <div class="col-4 d-flex justify-content-center ">
-                    <img src="img/image (1).png" class="rounded-pill" width="273" height="331" loading="lazy">
-                </div>
-                <div class="col-5">
-                    <h2>O que foi a Tropicália?</h2>
-                    <p class="p-2">A Tropicália, também conhecida como Tropicalismo, foi um movimento cultural
-                        brasileiro que surgiu na década de 1960, tendo seu auge entre 1967 e 1968. Esse movimento
-                        abrangeu várias expressões artísticas, como a música, o cinema, o teatro e as artes plásticas, e
-                        teve como principal característica a mistura de elementos da cultura brasileira tradicional com
-                        influências estrangeiras, especialmente do rock e da música pop. Fonte: Site Toda a matéria</p>
-                </div>
+            <div class="hero-point">
+              <strong>Tecnologia</strong>
+              <span>Transformação do grão em valor e inovação.</span>
             </div>
-        </section>
-
-        <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
-            <h2 class="text-center pt-5">Galeria</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
-
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Jorge_Ben_e_o_Trio_Mocotó_no_Teatro_da_Lagoa,_1971.tif.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Os_Mutantes_2.tif.jpg" class="img-fluid rounded-5"
-                            loading="lazy">
-                    </div>
-                </div>
-                <div class="row mt-4  justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Gilberto_Gil_nos_anos_1960.tif.jpg" class="img-fluid rounded-5"
-                            loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Caetano_Veloso_no_III_Festival_da_Música_Popular.tif.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                </div>
+            <div class="hero-point">
+              <strong>Futuro</strong>
+              <span>Produção com equilíbrio entre economia e meio ambiente.</span>
             </div>
-        </section>
+          </div>
+        </div>
 
-        <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
+        <div class="hero-visual">
+          <div class="hero-image-card">
+            <img src="./img/campo.png" alt="Campo de cevada em Guarapuava" />
+            <div class="hero-image-overlay">
+              <span>Uma mesma cadeia, muitos impactos</span>
+              <strong>O campo produz, a indústria transforma e a cidade reconhece o valor dessa conexão.</strong>
             </div>
-        </section>
-    </main>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="jornada" class="content-section reveal">
+      <div class="section-heading">
+        <span class="section-tag">Jornada produtiva</span>
+        <h2>Da lavoura à transformação</h2>
+        <p>A cadeia produtiva é apresentada em etapas visuais claras para mostrar como o campo, a indústria e a cidade se conectam ao longo do processo.</p>
+      </div>
+
+      <div class="process-grid">
+        <article class="surface-block process-card">
+          <div class="process-number">01</div>
+          <h3>Cultivo no campo</h3>
+          <p>A cevada começa sua jornada em lavouras planejadas, com atenção ao solo, ao clima e ao manejo responsável.</p>
+        </article>
+
+        <article class="surface-block process-card">
+          <div class="process-number">02</div>
+          <h3>Beneficiamento e malte</h3>
+          <p>Após a colheita, o grão passa por processos técnicos que unem agro, indústria e tecnologia para gerar valor.</p>
+        </article>
+
+        <article class="surface-block process-card">
+          <div class="process-number">03</div>
+          <h3>Chegada à cidade</h3>
+          <p>O malte conecta produção, economia e consumo, mostrando como o campo impacta diretamente a vida urbana.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="galeria" class="content-section reveal">
+      <div class="section-heading">
+        <span class="section-tag">Galeria</span>
+        <h2>Do plantio ao produto final</h2>
+        <p>Uma visão visual da cadeia produtiva que liga o campo, a indústria e o cotidiano urbano.</p>
+      </div>
+
+      <div class="surface-block gallery-block">
+        <div class="carousel-wrapper">
+          <button class="carousel-btn left" type="button" onclick="changeSlide(-1)" aria-label="Imagem anterior">&#10094;</button>
+
+          <div class="carousel-slide">
+            <img id="carousel-image" src="./img/campo.png" alt="Campo de cevada em Guarapuava" />
+          </div>
+
+          <button class="carousel-btn right" type="button" onclick="changeSlide(1)" aria-label="Próxima imagem">&#10095;</button>
+        </div>
+
+        <div class="carousel-caption">
+          <div>
+            <h3 id="carousel-title">Campo de cevada</h3>
+            <p id="carousel-description">O início da jornada acontece no campo, onde o cultivo da cevada depende de planejamento, clima favorável e cuidado com os recursos naturais.</p>
+          </div>
+          <div class="carousel-dots" aria-label="Indicadores do carrossel">
+            <button type="button" class="dot active" data-index="0" aria-label="Ir para imagem 1"></button>
+            <button type="button" class="dot" data-index="1" aria-label="Ir para imagem 2"></button>
+            <button type="button" class="dot" data-index="2" aria-label="Ir para imagem 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="curiosidades" class="content-section reveal">
+      <div class="section-heading">
+        <span class="section-tag">Curiosidades</span>
+        <h2>Você sabia?</h2>
+        <p>Pequenos fatos que ajudam a entender a relevância da cevada, do malte e do agro sustentável.</p>
+      </div>
+
+      <div class="surface-block info-box">
+        <p id="fact-text">A cevada é um dos grãos cultivados há mais tempo pela humanidade e segue tendo grande importância econômica e alimentar.</p>
+        <button id="fact-btn" class="action-btn" type="button">Mostrar outra curiosidade</button>
+      </div>
+    </section>
+
+    <section id="quiz" class="content-section reveal">
+      <div class="section-heading">
+        <span class="section-tag">Interatividade</span>
+        <h2>Quiz: teste seus conhecimentos</h2>
+        <p>Uma forma leve de revisar os principais conceitos apresentados no projeto.</p>
+      </div>
+
+      <form id="quiz-form" class="surface-block quiz-form">
+        <div class="quiz-question">
+          <p><strong>1.</strong> Qual grão é a base da cadeia produtiva apresentada no site?</p>
+          <label><input type="radio" name="q1" value="errado" /> Milho</label>
+          <label><input type="radio" name="q1" value="certo" /> Cevada</label>
+          <label><input type="radio" name="q1" value="errado" /> Arroz</label>
+        </div>
+
+        <div class="quiz-question">
+          <p><strong>2.</strong> Depois da colheita, a cevada passa por processos que resultam em:</p>
+          <label><input type="radio" name="q2" value="errado" /> Algodão</label>
+          <label><input type="radio" name="q2" value="certo" /> Malte</label>
+          <label><input type="radio" name="q2" value="errado" /> Madeira</label>
+        </div>
+
+        <div class="quiz-question">
+          <p><strong>3.</strong> A expressão “do campo ao copo” representa principalmente:</p>
+          <label><input type="radio" name="q3" value="errado" /> Um passeio turístico pela cidade</label>
+          <label><input type="radio" name="q3" value="certo" /> A ligação entre produção agrícola, indústria e consumo</label>
+          <label><input type="radio" name="q3" value="errado" /> Apenas o transporte da colheita</label>
+        </div>
+
+        <div class="quiz-question">
+          <p><strong>4.</strong> Qual prática ajuda a tornar essa cadeia produtiva mais sustentável?</p>
+          <label><input type="radio" name="q4" value="certo" /> Uso consciente da água e cuidado com o solo</label>
+          <label><input type="radio" name="q4" value="errado" /> Aumento do desperdício em todas as etapas</label>
+          <label><input type="radio" name="q4" value="errado" /> Eliminação total da tecnologia no campo</label>
+        </div>
+
+        <div class="quiz-question quiz-question-last">
+          <p><strong>5.</strong> O projeto mostra que campo e cidade estão conectados porque:</p>
+          <label><input type="radio" name="q5" value="errado" /> São realidades sem relação entre si</label>
+          <label><input type="radio" name="q5" value="certo" /> O que é produzido no campo movimenta a indústria e chega ao cotidiano urbano</label>
+          <label><input type="radio" name="q5" value="errado" /> A cidade produz todo o malte sozinha</label>
+        </div>
+
+        <button type="submit" class="action-btn quiz-submit-btn">Ver resultado</button>
+      </form>
+
+      <div id="quiz-result" class="surface-block quiz-result" aria-live="polite"></div>
+    </section>
+
+    <section id="sustentabilidade" class="content-section reveal">
+      <div class="section-heading">
+        <span class="section-tag">Sustentabilidade</span>
+        <h2>Agro forte, futuro sustentável</h2>
+        <p>A produção da cevada e a transformação em malte mostram que desenvolvimento e responsabilidade ambiental precisam caminhar juntos.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="info-card expandable-card">
+          <button class="card-toggle" type="button" aria-expanded="false">
+            <span>Produção responsável</span>
+            <span class="card-icon">+</span>
+          </button>
+          <div class="card-content">
+            <p>Produzir com qualidade exige planejamento, tecnologia e boas práticas agrícolas desde o preparo do solo até a colheita.</p>
+          </div>
+        </article>
+
+        <article class="info-card expandable-card">
+          <button class="card-toggle" type="button" aria-expanded="false">
+            <span>Equilíbrio ambiental</span>
+            <span class="card-icon">+</span>
+          </button>
+          <div class="card-content">
+            <p>O uso consciente da água, a preservação do solo e a redução de desperdícios ajudam a manter a produtividade sem comprometer o meio ambiente.</p>
+          </div>
+        </article>
+
+        <article class="info-card expandable-card">
+          <button class="card-toggle" type="button" aria-expanded="false">
+            <span>Futuro sustentável</span>
+            <span class="card-icon">+</span>
+          </button>
+          <div class="card-content">
+            <p>Pensar no amanhã significa fortalecer o agro hoje com soluções que respeitem os recursos naturais e contribuam para as próximas gerações.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="video" class="content-section reveal">
+      <div class="section-heading">
+        <span class="section-tag">Audiovisual</span>
+        <h2>Vídeo: a cadeia produtiva do malte</h2>
+        <p>Um complemento visual para aprofundar a compreensão do tema e enriquecer a apresentação do projeto.</p>
+      </div>
+
+      <div class="surface-block video-shell">
+        <div class="video-container">
+          <video controls>
+            <source src="./img/cadeia produtiva.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeo.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section id="hq" class="content-section reveal">
+      <div class="section-heading">
+        <span class="section-tag">Narrativa</span>
+        <h2>História em quadrinhos</h2>
+        <p>Uma experiência complementar para apresentar o conteúdo de forma criativa e envolvente.</p>
+      </div>
+
+      <div class="surface-block hq-shell">
+        <div class="hq-frame-container">
+          <iframe src="./HQ/hq.html" title="História em Quadrinhos" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="content-section reveal">
+      <div class="section-heading">
+        <span class="section-tag">Contato</span>
+        <h2>Responsável pelo projeto</h2>
+      </div>
+
+      <div class="surface-block contact-card contact-card-professional">
+        <div class="contact-card-header">
+          <h3>Willian Schön Lopes</h3>
+        </div>
+
+        <div class="contact-info-grid">
+          <div class="contact-info-item">
+            <span class="contact-label">Função</span>
+            <strong>Embaixador da Programação Paraná</strong>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-label">E-mail</span>
+            <a href="mailto:lopes.willian@escola.pr.gov.br">lopes.willian@escola.pr.gov.br</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
     <footer class="text-center p-3 fst-italic">
         <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
         <p class="mt-3">Desenvolvido por coloque seu nome aqui</p>
     </footer>
     <script src="script2.js"></script>
-
 </body>
-
 </html>
